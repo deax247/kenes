@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Consulting Company — Главная</title>
+
+    <style>
+      /* =========================
+       Палитра (основной: темно-коричневый)
+       ========================= */
+      :root {
+        --bg: #0f0c0a;
+        --surface: #14100d;
+        --surface-2: #1b1511;
+
+        --brand: #3a2417; /* dark brown */
+        --brand-2: #6a3d23; /* теплый коричневый */
+        --accent: #d6b27c; /* песочно-золотой акцент */
+        --muted: #b7aca3;
+
+        --text: #f2ede9;
+        --text-2: #d9d1cb;
+
+        --line: rgba(255, 255, 255, 0.1);
+
+        --green-placeholder: #19b54a; /* заглушки вместо фото */
+        --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+
+        --radius: 16px;
+        --radius-lg: 22px;
+
+        --container: 1160px;
+      }
+
+      /* =========================
+       Base
+       ========================= */
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+        color: var(--text);
+        background: radial-gradient(
+            1200px 800px at 20% -10%,
+            rgba(214, 178, 124, 0.14),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 600px at 100% 0%,
+            rgba(106, 61, 35, 0.2),
+            transparent 55%
+          ),
+          var(--bg);
+        line-height: 1.45;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+        color: inherit;
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text-2);
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        backdrop-filter: blur(6px);
+      }
+
+      .title {
+        font-size: clamp(26px, 3.2vw, 44px);
+        line-height: 1.05;
+        margin: 10px 0 12px;
+        letter-spacing: -0.6px;
+      }
+
+      .subtitle {
+        margin: 0 0 6px;
+        color: var(--accent);
+        font-weight: 650;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--text-2);
+        max-width: 62ch;
+      }
+
+      .section {
+        padding: 88px 0;
+      }
+
+      .section--tight {
+        padding: 56px 0;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.02)
+        );
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: transform 0.15s ease, filter 0.15s ease,
+          background 0.15s ease;
+        font-weight: 650;
+        letter-spacing: 0.2px;
+        user-select: none;
+        white-space: nowrap;
+      }
+
+      .btn:active {
+        transform: translateY(1px);
+      }
+
+      .btn--primary {
+        background: linear-gradient(180deg, var(--brand-2), var(--brand));
+        border-color: rgba(214, 178, 124, 0.25);
+      }
+      .btn--primary:hover {
+        filter: brightness(1.05);
+      }
+
+      .btn--ghost {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: var(--line);
+        color: var(--text);
+      }
+      .btn--ghost:hover {
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .btn--light {
+        background: rgba(255, 255, 255, 0.94);
+        color: #1a120d;
+        border-color: rgba(255, 255, 255, 0.55);
+      }
+      .btn--light:hover {
+        filter: brightness(0.98);
+      }
+
+      .divider {
+        height: 1px;
+        background: var(--line);
+        margin: 18px 0;
+      }
+
+      /* =========================
+       Header
+       ========================= */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(15, 12, 10, 0.7);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+      }
+
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 14px 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 170px;
+      }
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: linear-gradient(
+          145deg,
+          rgba(214, 178, 124, 0.28),
+          rgba(58, 36, 23, 0.85)
+        );
+        border: 1px solid rgba(214, 178, 124, 0.25);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      }
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.05;
+      }
+      .logo-text b {
+        letter-spacing: 0.4px;
+      }
+      .logo-text small {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 18px;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+      }
+
+      nav a {
+        color: var(--text-2);
+        font-size: 14px;
+        padding: 10px 8px;
+        border-radius: 10px;
+        transition: background 0.15s ease, color 0.15s ease;
+      }
+      nav a:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+      }
+
+      .head-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .burger {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+        cursor: pointer;
+        position: relative;
+      }
+      .burger span,
+      .burger::before,
+      .burger::after {
+        content: "";
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 2px;
+      }
+      .burger span {
+        top: 21px;
+      }
+      .burger::before {
+        top: 15px;
+      }
+      .burger::after {
+        top: 27px;
+      }
+
+      /* mobile drawer (без JS — через чекбокс) */
+      #menuToggle {
+        display: none;
+      }
+      .mobile-drawer {
+        display: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 10px 0 18px;
+      }
+      .mobile-drawer a {
+        display: block;
+        padding: 12px 10px;
+        border-radius: 12px;
+        color: var(--text-2);
+      }
+      .mobile-drawer a:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+      }
+
+      #menuToggle:checked ~ .mobile-drawer {
+        display: block;
+      }
+
+      /* =========================
+       Hero "Slider" (статическая заглушка)
+       ========================= */
+      .hero {
+        position: relative;
+        padding: 28px 0 0;
+      }
+
+      .hero-card {
+        border-radius: calc(var(--radius-lg) + 8px);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.01)
+        );
+        box-shadow: var(--shadow);
+      }
+
+      .hero-slide {
+        position: relative;
+        min-height: 520px;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      /* Заглушка под большой баннер (вместо фото — зеленый) */
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            800px 500px at 25% 20%,
+            rgba(214, 178, 124, 0.2),
+            transparent 55%
+          ),
+          radial-gradient(
+            700px 450px at 70% 30%,
+            rgba(106, 61, 35, 0.22),
+            transparent 60%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(25, 181, 74, 0.5),
+            rgba(25, 181, 74, 0.25)
+          ),
+          var(--green-placeholder);
+        filter: saturate(1.05);
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(15, 12, 10, 0.05),
+          rgba(15, 12, 10, 0.82)
+        );
+      }
+
+      .hero-content {
+        position: relative;
+        width: 100%;
+        padding: 34px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 22px;
+        align-items: end;
+      }
+
+      .hero-h1 {
+        font-size: clamp(34px, 4vw, 58px);
+        line-height: 1.02;
+        margin: 10px 0 10px;
+        letter-spacing: -1px;
+      }
+
+      .hero-right {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+        justify-content: flex-end;
+      }
+
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .dots {
+        position: absolute;
+        right: 18px;
+        bottom: 16px;
+        display: flex;
+        gap: 8px;
+        opacity: 0.85;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.35);
+      }
+      .dot.active {
+        background: rgba(214, 178, 124, 0.9);
+      }
+
+      /* =========================
+       About (две картинки + текст)
+       ========================= */
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1.05fr;
+        gap: 26px;
+        align-items: center;
+      }
+
+      .about-media {
+        position: relative;
+        min-height: 420px;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      /* Большая верхняя "картинка" */
+      .about-media .big {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        right: 18px;
+        bottom: 110px;
+        border-radius: 18px;
+        background: linear-gradient(
+            135deg,
+            rgba(25, 181, 74, 0.55),
+            rgba(25, 181, 74, 0.25)
+          ),
+          var(--green-placeholder);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Маленькая нижняя "картинка" */
+      .about-media .small {
+        position: absolute;
+        left: 18px;
+        bottom: 18px;
+        width: min(260px, 60%);
+        height: 140px;
+        border-radius: 18px;
+        background: linear-gradient(
+            135deg,
+            rgba(25, 181, 74, 0.65),
+            rgba(25, 181, 74, 0.35)
+          ),
+          var(--green-placeholder);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+      }
+
+      .about-text {
+        padding: 10px 0;
+      }
+
+      .about-text p {
+        margin: 0 0 12px;
+        color: var(--text-2);
+      }
+
+      /* =========================
+       Team grid
+       ========================= */
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .team-card {
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.03);
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+      .team-card:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .team-photo {
+        aspect-ratio: 4/5;
+        background: linear-gradient(
+            135deg,
+            rgba(25, 181, 74, 0.6),
+            rgba(25, 181, 74, 0.25)
+          ),
+          var(--green-placeholder);
+      }
+
+      .team-meta {
+        padding: 14px 14px 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .team-meta b {
+        display: block;
+      }
+      .team-meta small {
+        color: var(--muted);
+      }
+
+      /* =========================
+       Clients "slider" (простая бегущая лента)
+       ========================= */
+      .marquee {
+        overflow: hidden;
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+      }
+      .marquee-track {
+        display: flex;
+        gap: 16px;
+        padding: 16px;
+        width: max-content;
+        animation: scroll 16s linear infinite;
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .logo-box {
+        width: 190px;
+        height: 84px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.02)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.55);
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      /* =========================
+       Form block
+       ========================= */
+      .form-wrap {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 22px;
+        align-items: stretch;
+      }
+
+      .form-left {
+        padding: 26px;
+      }
+      .form-left p {
+        color: var(--text-2);
+        margin: 0 0 14px;
+      }
+
+      .form-right {
+        padding: 26px;
+        background: linear-gradient(
+          180deg,
+          rgba(58, 36, 23, 0.25),
+          rgba(255, 255, 255, 0.02)
+        );
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .fields {
+        display: grid;
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .input {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(0, 0, 0, 0.25);
+        outline: none;
+      }
+
+      .input:focus {
+        border-color: rgba(214, 178, 124, 0.55);
+        box-shadow: 0 0 0 3px rgba(214, 178, 124, 0.12);
+      }
+
+      textarea.input {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      .consent {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      /* =========================
+       Footer
+       ========================= */
+      footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.22);
+      }
+
+      .foot-top {
+        padding: 18px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .foot-top .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .foot-top p {
+        margin: 0;
+        color: var(--text-2);
+      }
+
+      .foot-bottom {
+        padding: 26px 0 22px;
+      }
+
+      .foot-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr 0.8fr;
+        gap: 18px;
+        align-items: start;
+      }
+
+      .foot-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px 12px;
+      }
+
+      .foot-menu a {
+        color: var(--text-2);
+        padding: 8px 10px;
+        border-radius: 12px;
+        display: inline-block;
+      }
+      .foot-menu a:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+      }
+
+      .social {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+      }
+
+      .soc-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .soc-btn:hover {
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .copyright {
+        margin-top: 14px;
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 13px;
+      }
+
+      /* =========================
+       Floating buttons (как на примере)
+       ========================= */
+      .fixed-bts {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 60;
+      }
+      .fixed-bts a {
+        width: 52px;
+        height: 52px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(0, 0, 0, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(8px);
+      }
+      .fixed-bts a:hover {
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .icon {
+        width: 22px;
+        height: 22px;
+        border-radius: 6px;
+        background: rgba(214, 178, 124, 0.9);
+        box-shadow: 0 10px 30px rgba(214, 178, 124, 0.18);
+      }
+
+      /* =========================
+       Responsive
+       ========================= */
+      @media (max-width: 980px) {
+        nav {
+          display: none;
+        }
+        .burger {
+          display: block;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-right {
+          align-items: flex-start;
+        }
+        .about {
+          grid-template-columns: 1fr;
+        }
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .form-wrap {
+          grid-template-columns: 1fr;
+        }
+        .form-right {
+          border-left: none;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .foot-grid {
+          grid-template-columns: 1fr;
+        }
+        .social {
+          justify-content: flex-start;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .hero-slide {
+          min-height: 520px;
+        }
+        .hero-content {
+          padding: 22px;
+        }
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+        .fixed-bts {
+          right: 12px;
+          bottom: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <div class="head">
+          <a class="logo" href="#">
+            <div class="logo-mark" aria-hidden="true"></div>
+            <div class="logo-text">
+              <b>CONSULTING</b>
+              <small>Lorem ipsum</small>
+            </div>
+          </a>
+
+          <!-- mobile toggle -->
+          <input id="menuToggle" type="checkbox" />
+          <label class="burger" for="menuToggle" aria-label="Открыть меню"
+            ><span></span
+          ></label>
+
+          <nav aria-label="Основное меню">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#about">О компании</a></li>
+              <li><a href="#team">Команда</a></li>
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#projects">Проекты</a></li>
+              <li><a href="#careers">Вакансии</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="head-actions">
+            <a class="btn btn--primary" href="#consult"
+              >Получить консультацию</a
+            >
+          </div>
+        </div>
+
+        <div class="mobile-drawer" aria-label="Мобильное меню">
+          <div class="divider"></div>
+          <a href="#">Главная</a>
+          <a href="#about">О компании</a>
+          <a href="#team">Команда</a>
+          <a href="#services">Услуги</a>
+          <a href="#projects">Проекты</a>
+          <a href="#careers">Вакансии</a>
+          <a href="#contacts">Контакты</a>
+          <div style="margin-top: 10px">
+            <a
+              class="btn btn--primary"
+              style="width: 100%; justify-content: center"
+              href="#consult"
+              >Получить консультацию</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-slide">
+            <div class="hero-media" aria-hidden="true"></div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+
+            <div class="hero-content">
+              <span class="pill">Консалтинг • Аудит • Налоги • Финансы</span>
+
+              <div class="hero-grid">
+                <div>
+                  <p class="subtitle">Название компании</p>
+                  <h1 class="hero-h1">
+                    Lorem ipsum dolor sit amet, consectetur.
+                  </h1>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+
+                  <div class="hero-badges">
+                    <span class="pill">10+ лет опыта</span>
+                    <span class="pill">Сопровождение проектов</span>
+                    <span class="pill">Комплексные решения</span>
+                  </div>
+                </div>
+
+                <div class="hero-right">
+                  <a class="btn btn--light" href="#consult"
+                    >Бесплатная консультация</a
+                  >
+                  <a class="btn btn--ghost" href="#services">Смотреть услуги</a>
+
+                  <div
+                    class="card"
+                    style="
+                      padding: 14px 16px;
+                      background: rgba(0, 0, 0, 0.25);
+                      border-radius: 18px;
+                    "
+                  >
+                    <div
+                      style="display: flex; gap: 10px; align-items: flex-start"
+                    >
+                      <div
+                        style="
+                          width: 10px;
+                          height: 10px;
+                          border-radius: 999px;
+                          background: rgba(214, 178, 124, 0.9);
+                          margin-top: 6px;
+                        "
+                      ></div>
+                      <div>
+                        <b>Короткий тезис</b>
+                        <div style="color: var(--muted); font-size: 13px">
+                          Lorem ipsum dolor sit amet, consectetur.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dots" aria-hidden="true">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about">
+          <div class="about-media" aria-hidden="true">
+            <div class="big"></div>
+            <div class="small"></div>
+          </div>
+
+          <div class="about-text">
+            <p class="subtitle">Lorem ipsum</p>
+            <h2 class="title">О компании</h2>
+            <p>
+              <b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
+              ad minim veniam, quis nostrud exercitation.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute
+              irure dolor in reprehenderit.
+            </p>
+
+            <div
+              style="
+                margin-top: 16px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+              "
+            >
+              <a class="btn btn--primary" href="#projects">Наши проекты</a>
+              <a class="btn btn--ghost" href="#contacts">Связаться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section section--tight">
+      <div class="container">
+        <div class="center">
+          <p class="subtitle">Lorem ipsum</p>
+          <h2 class="title">Наша команда</h2>
+          <p class="lead" style="margin: 0 auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+            odio. Praesent libero.
+          </p>
+        </div>
+
+        <div style="height: 20px"></div>
+
+        <div class="grid team-grid">
+          <a class="team-card" href="#">
+            <div class="team-photo"></div>
+            <div class="team-meta">
+              <b>Lorem Ipsum</b>
+              <small>Должность</small>
+            </div>
+          </a>
+
+          <a class="team-card" href="#">
+            <div class="team-photo"></div>
+            <div class="team-meta">
+              <b>Lorem Ipsum</b>
+              <small>Должность</small>
+            </div>
+          </a>
+
+          <a class="team-card" href="#">
+            <div class="team-photo"></div>
+            <div class="team-meta">
+              <b>Lorem Ipsum</b>
+              <small>Должность</small>
+            </div>
+          </a>
+
+          <a class="team-card" href="#">
+            <div class="team-photo"></div>
+            <div class="team-meta">
+              <b>Lorem Ipsum</b>
+              <small>Должность</small>
+            </div>
+          </a>
+
+          <a class="team-card" href="#">
+            <div class="team-photo"></div>
+            <div class="team-meta">
+              <b>Lorem Ipsum</b>
+              <small>Должность</small>
+            </div>
+          </a>
+
+          <a class="team-card" href="#">
+            <div class="team-photo"></div>
+            <div class="team-meta">
+              <b>Lorem Ipsum</b>
+              <small>Должность</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / PROJECTS / CAREERS placeholders (чтобы меню не вело в пустоту) -->
+    <section id="services" class="section section--tight">
+      <div class="container">
+        <div class="card" style="padding: 22px">
+          <p class="subtitle">Раздел</p>
+          <h2 class="title" style="margin-top: 6px">Услуги</h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Здесь
+            потом сделаем список услуг/карточки.)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section--tight">
+      <div class="container">
+        <div class="card" style="padding: 22px">
+          <p class="subtitle">Раздел</p>
+          <h2 class="title" style="margin-top: 6px">Проекты</h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Здесь
+            потом кейсы/проекты.)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="careers" class="section section--tight">
+      <div class="container">
+        <div class="card" style="padding: 22px">
+          <p class="subtitle">Раздел</p>
+          <h2 class="title" style="margin-top: 6px">Вакансии</h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Здесь
+            потом список вакансий.)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="section">
+      <div class="container">
+        <div class="center">
+          <p class="subtitle">Lorem ipsum</p>
+          <h2 class="title">Наши клиенты</h2>
+        </div>
+
+        <div style="height: 18px"></div>
+
+        <div class="marquee" aria-label="Лента клиентов (заглушки)">
+          <div class="marquee-track">
+            <!-- Дублируем набор дважды для бесшовности -->
+            <div class="logo-box">CLIENT 01</div>
+            <div class="logo-box">CLIENT 02</div>
+            <div class="logo-box">CLIENT 03</div>
+            <div class="logo-box">CLIENT 04</div>
+            <div class="logo-box">CLIENT 05</div>
+            <div class="logo-box">CLIENT 06</div>
+            <div class="logo-box">CLIENT 07</div>
+            <div class="logo-box">CLIENT 08</div>
+
+            <div class="logo-box">CLIENT 01</div>
+            <div class="logo-box">CLIENT 02</div>
+            <div class="logo-box">CLIENT 03</div>
+            <div class="logo-box">CLIENT 04</div>
+            <div class="logo-box">CLIENT 05</div>
+            <div class="logo-box">CLIENT 06</div>
+            <div class="logo-box">CLIENT 07</div>
+            <div class="logo-box">CLIENT 08</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULT FORM -->
+    <section id="consult" class="section">
+      <div class="container">
+        <div class="card">
+          <div class="form-wrap">
+            <div class="form-left">
+              <p class="subtitle">Контакт</p>
+              <h2 class="title">Получить консультацию</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
+                ad minim veniam, quis nostrud exercitation.
+              </p>
+
+              <div class="divider"></div>
+
+              <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                <span class="pill">Ответ в ближайшее рабочее время</span>
+                <span class="pill">Lorem ipsum</span>
+              </div>
+            </div>
+
+            <div class="form-right">
+              <form action="#" method="post">
+                <div class="fields">
+                  <input
+                    class="input"
+                    type="text"
+                    name="name"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                  <input
+                    class="input"
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 (...)"
+                    required
+                  />
+                  <input
+                    class="input"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+                  <select class="input" name="service">
+                    <option value="" selected disabled>Выберите услугу</option>
+                    <option>Lorem ipsum 1</option>
+                    <option>Lorem ipsum 2</option>
+                    <option>Lorem ipsum 3</option>
+                  </select>
+                  <textarea
+                    class="input"
+                    name="message"
+                    placeholder="Сообщение"
+                  ></textarea>
+
+                  <button class="btn btn--primary" type="submit">
+                    Отправить заявку
+                  </button>
+                  <div class="consent">
+                    Lorem ipsum: даю согласие на обработку персональных данных
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacts">
+      <div class="foot-top">
+        <div class="container">
+          <div class="row">
+            <p>
+              По всем вопросам пишите на:
+              <a href="mailto:info@company.kz" style="color: var(--accent)"
+                >info@company.kz</a
+              >
+            </p>
+            <a class="btn btn--primary" href="#consult"
+              >Получить консультацию</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <div class="container">
+          <div class="foot-grid">
+            <div>
+              <a class="logo" href="#">
+                <div class="logo-mark" aria-hidden="true"></div>
+                <div class="logo-text">
+                  <b>CONSULTING</b>
+                  <small>Lorem ipsum</small>
+                </div>
+              </a>
+              <div class="copyright">
+                © <span id="y"></span> Lorem ipsum dolor sit amet.
+              </div>
+            </div>
+
+            <div>
+              <ul class="foot-menu">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#about">О компании</a></li>
+                <li><a href="#team">Команда</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#careers">Вакансии</a></li>
+                <li><a href="#consult">Консультация</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="social">
+                <a class="soc-btn" href="#" aria-label="Telegram"
+                  ><span class="icon" aria-hidden="true"></span
+                ></a>
+                <a class="soc-btn" href="#" aria-label="WhatsApp"
+                  ><span class="icon" aria-hidden="true"></span
+                ></a>
+                <a class="soc-btn" href="#" aria-label="Instagram"
+                  ><span class="icon" aria-hidden="true"></span
+                ></a>
+              </div>
+              <div class="copyright" style="text-align: right">
+                Lorem ipsum dolor sit amet, consectetur.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating buttons -->
+    <div class="fixed-bts" aria-label="Быстрые контакты">
+      <a href="#" aria-label="WhatsApp"
+        ><span class="icon" aria-hidden="true"></span
+      ></a>
+      <a href="#" aria-label="Telegram"
+        ><span class="icon" aria-hidden="true"></span
+      ></a>
+      <a href="#" aria-label="Instagram"
+        ><span class="icon" aria-hidden="true"></span
+      ></a>
+    </div>
+
+    <script>
+      // мелочь для года в футере
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
