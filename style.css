@@ -1,23 +1,24 @@
 /* =========================
-   Палитра (основной: темно-коричневый)
+   Палитра (светлая: белый, голубой, бирюза)
    ========================= */
 :root {
-  --bg: #0f0c0a;
-  --surface: #14100d;
-  --surface-2: #1b1511;
+  --bg: #f4f9fd;
+  --surface: #ffffff;
+  --surface-2: #e8f3fb;
 
-  --brand: #3a2417; /* dark brown */
-  --brand-2: #6a3d23; /* теплый коричневый */
-  --accent: #d6b27c; /* песочно-золотой акцент */
-  --muted: #b7aca3;
+  --brand: #1a6b9e;
+  --brand-2: #2b8fd4;
+  --accent: #0ea5e9;
+  --accent-2: #14b8a6;
+  --muted: #64748b;
 
-  --text: #f2ede9;
-  --text-2: #d9d1cb;
+  --text: #0f172a;
+  --text-2: #475569;
 
-  --line: rgba(255, 255, 255, 0.1);
+  --line: rgba(15, 23, 42, 0.1);
 
-  --green-placeholder: #19b54a; /* заглушки вместо фото */
-  --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+  --photo-placeholder: #93c5fd;
+  --shadow: 0 18px 60px rgba(30, 91, 158, 0.12);
 
   --radius: 16px;
   --radius-lg: 22px;
@@ -42,12 +43,12 @@ body {
   color: var(--text);
   background: radial-gradient(
       1200px 800px at 20% -10%,
-      rgba(214, 178, 124, 0.14),
+      rgba(14, 165, 233, 0.12),
       transparent 60%
     ),
     radial-gradient(
       900px 600px at 100% 0%,
-      rgba(106, 61, 35, 0.2),
+      rgba(20, 184, 166, 0.1),
       transparent 55%
     ),
     var(--bg);
@@ -82,7 +83,7 @@ textarea {
   padding: 10px 14px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface);
   color: var(--text-2);
   font-size: 14px;
   letter-spacing: 0.2px;
@@ -127,8 +128,8 @@ textarea {
   border: 1px solid var(--line);
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.02)
+    var(--surface),
+    var(--surface-2)
   );
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
@@ -156,26 +157,28 @@ textarea {
 }
 
 .btn--primary {
+  color: #fff;
   background: linear-gradient(180deg, var(--brand-2), var(--brand));
-  border-color: rgba(214, 178, 124, 0.25);
+  border-color: rgba(14, 165, 233, 0.3);
 }
 .btn--primary:hover {
   filter: brightness(1.05);
 }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--surface-2);
   border-color: var(--line);
   color: var(--text);
 }
 .btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: #dbeafe;
 }
 
 .btn--light {
-  background: rgba(255, 255, 255, 0.94);
-  color: #1a120d;
-  border-color: rgba(255, 255, 255, 0.55);
+  background: var(--surface);
+  color: var(--brand);
+  border-color: var(--line);
+  box-shadow: var(--shadow);
 }
 .btn--light:hover {
   filter: brightness(0.98);
@@ -194,8 +197,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(15, 12, 10, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
 }
 
@@ -219,11 +222,11 @@ header {
   border-radius: 12px;
   background: linear-gradient(
     145deg,
-    rgba(214, 178, 124, 0.28),
-    rgba(58, 36, 23, 0.85)
+    rgba(14, 165, 233, 0.35),
+    rgba(26, 107, 158, 0.9)
   );
-  border: 1px solid rgba(214, 178, 124, 0.25);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  box-shadow: 0 12px 30px rgba(30, 91, 158, 0.15);
 }
 .logo-text {
   display: flex;
@@ -255,7 +258,7 @@ nav a {
   transition: background 0.15s ease, color 0.15s ease;
 }
 nav a:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-2);
   color: var(--text);
 }
 
@@ -271,7 +274,7 @@ nav a:hover {
   height: 44px;
   border-radius: 14px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface);
   cursor: pointer;
   position: relative;
 }
@@ -283,7 +286,7 @@ nav a:hover {
   left: 12px;
   right: 12px;
   height: 2px;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--text);
   border-radius: 2px;
 }
 .burger span {
@@ -302,7 +305,7 @@ nav a:hover {
 }
 .mobile-drawer {
   display: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
   padding: 10px 0 18px;
 }
 .mobile-drawer a {
@@ -312,7 +315,7 @@ nav a:hover {
   color: var(--text-2);
 }
 .mobile-drawer a:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-2);
   color: var(--text);
 }
 
@@ -331,11 +334,11 @@ nav a:hover {
 .hero-card {
   border-radius: calc(var(--radius-lg) + 8px);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--line);
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.03),
-    rgba(255, 255, 255, 0.01)
+    var(--surface),
+    var(--surface-2)
   );
   box-shadow: var(--shadow);
 }
@@ -353,20 +356,20 @@ nav a:hover {
   inset: 0;
   background: radial-gradient(
       800px 500px at 25% 20%,
-      rgba(214, 178, 124, 0.2),
+      rgba(45, 143, 212, 0.25),
       transparent 55%
     ),
     radial-gradient(
       700px 450px at 70% 30%,
-      rgba(106, 61, 35, 0.22),
+      rgba(20, 184, 166, 0.2),
       transparent 60%
     ),
     linear-gradient(
       135deg,
-      rgba(25, 181, 74, 0.5),
-      rgba(25, 181, 74, 0.25)
+      rgba(45, 143, 212, 0.45),
+      rgba(45, 143, 212, 0.2)
     ),
-    var(--green-placeholder);
+    var(--photo-placeholder);
   filter: saturate(1.05);
 }
 
@@ -375,8 +378,8 @@ nav a:hover {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(15, 12, 10, 0.05),
-    rgba(15, 12, 10, 0.82)
+    rgba(244, 249, 253, 0.1),
+    rgba(15, 23, 42, 0.65)
   );
 }
 
@@ -427,10 +430,34 @@ nav a:hover {
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(15, 23, 42, 0.2);
 }
 .dot.active {
-  background: rgba(214, 178, 124, 0.9);
+  background: var(--accent);
+}
+
+/* Текст на тёмном оверлее hero */
+.hero-content,
+.hero-content .lead,
+.hero-content .hero-h1,
+.hero-content .title {
+  color: #f8fafc;
+}
+.hero-content .pill {
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+}
+.hero-content .btn--ghost {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+.hero-content .btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.hero-content .card {
+  color: var(--text);
 }
 
 /* =========================
@@ -448,8 +475,8 @@ nav a:hover {
   min-height: 420px;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  background: var(--surface);
 }
 
 /* Большая верхняя "картинка" */
@@ -462,11 +489,11 @@ nav a:hover {
   border-radius: 18px;
   background: linear-gradient(
       135deg,
-      rgba(25, 181, 74, 0.55),
-      rgba(25, 181, 74, 0.25)
+      rgba(45, 143, 212, 0.5),
+      rgba(45, 143, 212, 0.2)
     ),
-    var(--green-placeholder);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+    var(--photo-placeholder);
+  border: 1px solid var(--line);
 }
 
 /* Маленькая нижняя "картинка" */
@@ -479,12 +506,12 @@ nav a:hover {
   border-radius: 18px;
   background: linear-gradient(
       135deg,
-      rgba(25, 181, 74, 0.65),
-      rgba(25, 181, 74, 0.35)
+      rgba(45, 143, 212, 0.55),
+      rgba(45, 143, 212, 0.3)
     ),
-    var(--green-placeholder);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+    var(--photo-placeholder);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 45px rgba(30, 91, 158, 0.12);
 }
 
 .about-text {
@@ -510,29 +537,29 @@ nav a:hover {
 
 .team-card {
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--line);
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface);
   transition: transform 0.15s ease, background 0.15s ease;
 }
 .team-card:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-2);
 }
 
 .team-photo {
   aspect-ratio: 4/5;
   background: linear-gradient(
       135deg,
-      rgba(25, 181, 74, 0.6),
-      rgba(25, 181, 74, 0.25)
+      rgba(45, 143, 212, 0.5),
+      rgba(45, 143, 212, 0.2)
     ),
-    var(--green-placeholder);
+    var(--photo-placeholder);
 }
 
 .team-meta {
   padding: 14px 14px 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .team-meta b {
@@ -548,8 +575,8 @@ nav a:hover {
 .marquee {
   overflow: hidden;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  background: var(--surface);
 }
 .marquee-track {
   display: flex;
@@ -571,16 +598,16 @@ nav a:hover {
   width: 190px;
   height: 84px;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--line);
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.02)
+    var(--surface-2),
+    var(--surface-2)
   );
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--muted);
   font-weight: 700;
   letter-spacing: 0.6px;
   text-transform: uppercase;
@@ -609,10 +636,10 @@ nav a:hover {
   padding: 26px;
   background: linear-gradient(
     180deg,
-    rgba(58, 36, 23, 0.25),
-    rgba(255, 255, 255, 0.02)
+    rgba(26, 107, 158, 0.08),
+    var(--surface-2)
   );
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .fields {
@@ -625,14 +652,14 @@ nav a:hover {
   width: 100%;
   padding: 12px 14px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: var(--surface);
   outline: none;
 }
 
 .input:focus {
-  border-color: rgba(214, 178, 124, 0.55);
-  box-shadow: 0 0 0 3px rgba(214, 178, 124, 0.12);
+  border-color: rgba(14, 165, 233, 0.55);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
 }
 
 textarea.input {
@@ -650,13 +677,13 @@ textarea.input {
    Footer
    ========================= */
 footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.22);
+  border-top: 1px solid var(--line);
+  background: var(--surface-2);
 }
 
 .foot-top {
   padding: 18px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 .foot-top .row {
   display: flex;
@@ -697,7 +724,7 @@ footer {
   display: inline-block;
 }
 .foot-menu a:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-2);
   color: var(--text);
 }
 
@@ -712,20 +739,20 @@ footer {
   width: 44px;
   height: 44px;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  background: var(--surface);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-2);
 }
 .soc-btn:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: #dbeafe;
 }
 
 .copyright {
   margin-top: 14px;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--muted);
   font-size: 13px;
 }
 
@@ -745,24 +772,24 @@ footer {
   width: 52px;
   height: 52px;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: var(--surface);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 18px 45px rgba(30, 91, 158, 0.15);
   backdrop-filter: blur(8px);
 }
 .fixed-bts a:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: #dbeafe;
 }
 
 .icon {
   width: 22px;
   height: 22px;
   border-radius: 6px;
-  background: rgba(214, 178, 124, 0.9);
-  box-shadow: 0 10px 30px rgba(214, 178, 124, 0.18);
+  background: var(--accent);
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.2);
 }
 
 /* =========================
@@ -792,7 +819,7 @@ footer {
   }
   .form-right {
     border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
   }
   .foot-grid {
     grid-template-columns: 1fr;
@@ -817,571 +844,3 @@ footer {
     bottom: 12px;
   }
 }
-
-    .center{
-      text-align: center;
-    }
-
-    .card{
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 16px;
-      border-radius: 999px;
-      border:1px solid transparent;
-      cursor:pointer;
-      transition: transform .15s ease, filter .15s ease, background .15s ease;
-      font-weight: 650;
-      letter-spacing: .2px;
-      user-select:none;
-      white-space: nowrap;
-    }
-
-    .btn:active{ transform: translateY(1px); }
-
-    .btn--primary{
-      background: linear-gradient(180deg, var(--brand-2), var(--brand));
-      border-color: rgba(214,178,124,.25);
-    }
-    .btn--primary:hover{ filter: brightness(1.05); }
-
-    .btn--ghost{
-      background: rgba(255,255,255,.04);
-      border-color: var(--line);
-      color: var(--text);
-    }
-    .btn--ghost:hover{ background: rgba(255,255,255,.06); }
-
-    .btn--light{
-      background: rgba(255,255,255,.94);
-      color: #1a120d;
-      border-color: rgba(255,255,255,.55);
-    }
-    .btn--light:hover{ filter: brightness(0.98); }
-
-    .divider{
-      height:1px;
-      background: var(--line);
-      margin: 18px 0;
-    }
-
-    /* =========================
-       Header
-       ========================= */
-    header{
-      position: sticky;
-      top:0;
-      z-index: 50;
-      background: rgba(15,12,10,.70);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      backdrop-filter: blur(10px);
-    }
-
-    .head{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 14px 0;
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width: 170px;
-    }
-    .logo-mark{
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: linear-gradient(145deg, rgba(214,178,124,.28), rgba(58,36,23,.85));
-      border: 1px solid rgba(214,178,124,.25);
-      box-shadow: 0 12px 30px rgba(0,0,0,.35);
-    }
-    .logo-text{
-      display:flex;
-      flex-direction:column;
-      line-height:1.05;
-    }
-    .logo-text b{ letter-spacing: .4px; }
-    .logo-text small{ color: var(--muted); font-size: 12px; }
-
-    nav ul{
-      list-style:none;
-      display:flex;
-      gap: 18px;
-      padding:0;
-      margin:0;
-      align-items:center;
-    }
-
-    nav a{
-      color: var(--text-2);
-      font-size: 14px;
-      padding: 10px 8px;
-      border-radius: 10px;
-      transition: background .15s ease, color .15s ease;
-    }
-    nav a:hover{
-      background: rgba(255,255,255,.05);
-      color: var(--text);
-    }
-
-    .head-actions{
-      display:flex;
-      align-items:center;
-      gap: 12px;
-    }
-
-    .burger{
-      display:none;
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      cursor:pointer;
-      position: relative;
-    }
-    .burger span, .burger::before, .burger::after{
-      content:"";
-      position:absolute;
-      left: 12px;
-      right: 12px;
-      height: 2px;
-      background: rgba(255,255,255,.85);
-      border-radius: 2px;
-    }
-    .burger span{ top: 21px; }
-    .burger::before{ top: 15px; }
-    .burger::after{ top: 27px; }
-
-    /* mobile drawer (без JS — через чекбокс) */
-    #menuToggle{ display:none; }
-    .mobile-drawer{
-      display:none;
-      border-top:1px solid rgba(255,255,255,.08);
-      padding: 10px 0 18px;
-    }
-    .mobile-drawer a{
-      display:block;
-      padding: 12px 10px;
-      border-radius: 12px;
-      color: var(--text-2);
-    }
-    .mobile-drawer a:hover{ background: rgba(255,255,255,.05); color: var(--text); }
-
-    #menuToggle:checked ~ .mobile-drawer{ display:block; }
-
-    /* =========================
-       Hero "Slider" (статическая заглушка)
-       ========================= */
-    .hero{
-      position: relative;
-      padding: 28px 0 0;
-    }
-
-    .hero-card{
-      border-radius: calc(var(--radius-lg) + 8px);
-      overflow:hidden;
-      border: 1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
-      box-shadow: var(--shadow);
-    }
-
-    .hero-slide{
-      position: relative;
-      min-height: 520px;
-      display:flex;
-      align-items:flex-end;
-    }
-
-    /* Заглушка под большой баннер (вместо фото — зеленый) */
-    .hero-media{
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(800px 500px at 25% 20%, rgba(214,178,124,.20), transparent 55%),
-        radial-gradient(700px 450px at 70% 30%, rgba(106,61,35,.22), transparent 60%),
-        linear-gradient(135deg, rgba(25,181,74,.50), rgba(25,181,74,.25)),
-        var(--green-placeholder);
-      filter: saturate(1.05);
-    }
-
-    .hero-overlay{
-      position:absolute;
-      inset:0;
-      background: linear-gradient(180deg, rgba(15,12,10,.05), rgba(15,12,10,.82));
-    }
-
-    .hero-content{
-      position: relative;
-      width: 100%;
-      padding: 34px;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.3fr .7fr;
-      gap: 22px;
-      align-items:end;
-    }
-
-    .hero-h1{
-      font-size: clamp(34px, 4vw, 58px);
-      line-height: 1.02;
-      margin: 10px 0 10px;
-      letter-spacing: -1.0px;
-    }
-
-    .hero-right{
-      display:flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: flex-start;
-      justify-content: flex-end;
-    }
-
-    .hero-badges{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .dots{
-      position:absolute;
-      right: 18px;
-      bottom: 16px;
-      display:flex;
-      gap: 8px;
-      opacity: .85;
-    }
-    .dot{
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.35);
-    }
-    .dot.active{ background: rgba(214,178,124,.9); }
-
-    /* =========================
-       About (две картинки + текст)
-       ========================= */
-    .about{
-      display:grid;
-      grid-template-columns: 1fr 1.05fr;
-      gap: 26px;
-      align-items:center;
-    }
-
-    .about-media{
-      position: relative;
-      min-height: 420px;
-      border-radius: var(--radius-lg);
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-    }
-
-    /* Большая верхняя "картинка" */
-    .about-media .big{
-      position:absolute;
-      left: 18px;
-      top: 18px;
-      right: 18px;
-      bottom: 110px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(25,181,74,.55), rgba(25,181,74,.25)), var(--green-placeholder);
-      border:1px solid rgba(255,255,255,.10);
-    }
-
-    /* Маленькая нижняя "картинка" */
-    .about-media .small{
-      position:absolute;
-      left: 18px;
-      bottom: 18px;
-      width: min(260px, 60%);
-      height: 140px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(25,181,74,.65), rgba(25,181,74,.35)), var(--green-placeholder);
-      border:1px solid rgba(255,255,255,.10);
-      box-shadow: 0 18px 45px rgba(0,0,0,.35);
-    }
-
-    .about-text{
-      padding: 10px 0;
-    }
-
-    .about-text p{
-      margin: 0 0 12px;
-      color: var(--text-2);
-    }
-
-    /* =========================
-       Team grid
-       ========================= */
-    .grid{
-      display:grid;
-      gap: 18px;
-    }
-
-    .team-grid{
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .team-card{
-      border-radius: var(--radius-lg);
-      border:1px solid rgba(255,255,255,.10);
-      overflow:hidden;
-      background: rgba(255,255,255,.03);
-      transition: transform .15s ease, background .15s ease;
-    }
-    .team-card:hover{
-      transform: translateY(-2px);
-      background: rgba(255,255,255,.05);
-    }
-
-    .team-photo{
-      aspect-ratio: 4/5;
-      background: linear-gradient(135deg, rgba(25,181,74,.60), rgba(25,181,74,.25)), var(--green-placeholder);
-    }
-
-    .team-meta{
-      padding: 14px 14px 16px;
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-
-    .team-meta b{ display:block; }
-    .team-meta small{ color: var(--muted); }
-
-    /* =========================
-       Clients "slider" (простая бегущая лента)
-       ========================= */
-    .marquee{
-      overflow:hidden;
-      border-radius: var(--radius-lg);
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-    }
-    .marquee-track{
-      display:flex;
-      gap: 16px;
-      padding: 16px;
-      width: max-content;
-      animation: scroll 16s linear infinite;
-    }
-    @keyframes scroll{
-      from{ transform: translateX(0); }
-      to{ transform: translateX(-50%); }
-    }
-
-    .logo-box{
-      width: 190px;
-      height: 84px;
-      border-radius: 16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color: rgba(255,255,255,.55);
-      font-weight: 700;
-      letter-spacing: .6px;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-
-    /* =========================
-       Form block
-       ========================= */
-    .form-wrap{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .form-left{
-      padding: 26px;
-    }
-    .form-left p{ color: var(--text-2); margin: 0 0 14px; }
-
-    .form-right{
-      padding: 26px;
-      background: linear-gradient(180deg, rgba(58,36,23,.25), rgba(255,255,255,.02));
-      border-left: 1px solid rgba(255,255,255,.08);
-    }
-
-    .fields{
-      display:grid;
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .input{
-      width: 100%;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.25);
-      outline: none;
-    }
-
-    .input:focus{
-      border-color: rgba(214,178,124,.55);
-      box-shadow: 0 0 0 3px rgba(214,178,124,.12);
-    }
-
-    textarea.input{ min-height: 110px; resize: vertical; }
-
-    .consent{
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* =========================
-       Footer
-       ========================= */
-    footer{
-      border-top: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.22);
-    }
-
-    .foot-top{
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .foot-top .row{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .foot-top p{
-      margin:0;
-      color: var(--text-2);
-    }
-
-    .foot-bottom{
-      padding: 26px 0 22px;
-    }
-
-    .foot-grid{
-      display:grid;
-      grid-template-columns: 1fr 1.2fr .8fr;
-      gap: 18px;
-      align-items:start;
-    }
-
-    .foot-menu{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 8px 12px;
-    }
-
-    .foot-menu a{
-      color: var(--text-2);
-      padding: 8px 10px;
-      border-radius: 12px;
-      display:inline-block;
-    }
-    .foot-menu a:hover{ background: rgba(255,255,255,.05); color: var(--text); }
-
-    .social{
-      display:flex;
-      gap: 10px;
-      justify-content:flex-end;
-      flex-wrap: wrap;
-    }
-
-    .soc-btn{
-      width: 44px;
-      height: 44px;
-      border-radius: 16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color: rgba(255,255,255,.75);
-    }
-    .soc-btn:hover{ background: rgba(255,255,255,.06); }
-
-    .copyright{
-      margin-top: 14px;
-      color: rgba(255,255,255,.45);
-      font-size: 13px;
-    }
-
-    /* =========================
-       Floating buttons (как на примере)
-       ========================= */
-    .fixed-bts{
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      display:flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 60;
-    }
-    .fixed-bts a{
-      width: 52px;
-      height: 52px;
-      border-radius: 18px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.35);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow: 0 18px 45px rgba(0,0,0,.45);
-      backdrop-filter: blur(8px);
-    }
-    .fixed-bts a:hover{ background: rgba(255,255,255,.06); }
-
-    .icon{
-      width: 22px; height: 22px;
-      border-radius: 6px;
-      background: rgba(214,178,124,.9);
-      box-shadow: 0 10px 30px rgba(214,178,124,.18);
-    }
-
-    /* =========================
-       Responsive
-       ========================= */
-    @media (max-width: 980px){
-      nav{ display:none; }
-      .burger{ display:block; }
-      .hero-grid{ grid-template-columns: 1fr; }
-      .hero-right{ align-items:flex-start; }
-      .about{ grid-template-columns: 1fr; }
-      .team-grid{ grid-template-columns: repeat(2, 1fr); }
-      .form-wrap{ grid-template-columns: 1fr; }
-      .form-right{ border-left: none; border-top: 1px solid rgba(255,255,255,.08); }
-      .foot-grid{ grid-template-columns: 1fr; }
-      .social{ justify-content:flex-start; }
-    }
-
-    @media (max-width: 560px){
-      .hero-slide{ min-height: 520px; }
-      .hero-content{ padding: 22px; }
-      .team-grid{ grid-template-columns: 1fr; }
-      .fixed-bts{ right: 12px; bottom: 12px; }
-    }
-   
