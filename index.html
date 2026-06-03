@@ -3,482 +3,347 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Consulting Company — Главная</title>
+    <meta
+      name="description"
+      content="Kenes Consulting помогает компаниям в Казахстане выстроить финансы, налоги, аудит и управленческую отчетность."
+    />
+    <title>Kenes Consulting — финансы, налоги и аудит для бизнеса</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- HEADER -->
-    <header>
+    <header class="site-header">
       <div class="container">
         <div class="head">
-          <a class="logo" href="#">
-            <div class="logo-mark" aria-hidden="true"></div>
-            <div class="logo-text">
-              <b>CONSULTING</b>
-              <small>Lorem ipsum</small>
-            </div>
+          <a class="logo" href="#" aria-label="Kenes Consulting">
+            <span class="logo-mark" aria-hidden="true">K</span>
+            <span class="logo-text">
+              <b>Kenes Consulting</b>
+              <small>Finance & Tax Advisory</small>
+            </span>
           </a>
 
-          <!-- mobile toggle -->
           <input id="menuToggle" type="checkbox" />
-          <label class="burger" for="menuToggle" aria-label="Открыть меню"
-            ><span></span
-          ></label>
+          <label class="burger" for="menuToggle" aria-label="Открыть меню">
+            <span></span>
+          </label>
 
           <nav aria-label="Основное меню">
             <ul>
-              <li><a href="#">Главная</a></li>
               <li><a href="#about">О компании</a></li>
-              <li><a href="#team">Команда</a></li>
               <li><a href="#services">Услуги</a></li>
-              <li><a href="#projects">Проекты</a></li>
+              <li><a href="#projects">Кейсы</a></li>
+              <li><a href="#team">Команда</a></li>
               <li><a href="#careers">Вакансии</a></li>
               <li><a href="#contacts">Контакты</a></li>
             </ul>
           </nav>
 
           <div class="head-actions">
-            <a class="btn btn--primary" href="#consult"
-              >Получить консультацию</a
-            >
+            <a class="btn btn--primary" href="#consult">Обсудить задачу</a>
           </div>
         </div>
 
         <div class="mobile-drawer" aria-label="Мобильное меню">
-          <div class="divider"></div>
-          <a href="#">Главная</a>
           <a href="#about">О компании</a>
-          <a href="#team">Команда</a>
           <a href="#services">Услуги</a>
-          <a href="#projects">Проекты</a>
+          <a href="#projects">Кейсы</a>
+          <a href="#team">Команда</a>
           <a href="#careers">Вакансии</a>
           <a href="#contacts">Контакты</a>
-          <div style="margin-top: 10px">
-            <a
-              class="btn btn--primary"
-              style="width: 100%; justify-content: center"
-              href="#consult"
-              >Получить консультацию</a
-            >
-          </div>
+          <a class="btn btn--primary" href="#consult">Обсудить задачу</a>
         </div>
       </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-card">
-          <div class="hero-slide">
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-shell">
             <div class="hero-media" aria-hidden="true"></div>
-            <div class="hero-overlay" aria-hidden="true"></div>
-
             <div class="hero-content">
-              <span class="pill">Консалтинг • Аудит • Налоги • Финансы</span>
-
-              <div class="hero-grid">
-                <div>
-                  <p class="subtitle">Название компании</p>
-                  <h1 class="hero-h1">
-                    Lorem ipsum dolor sit amet, consectetur.
-                  </h1>
-                  <p class="lead">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-
-                  <div class="hero-badges">
-                    <span class="pill">10+ лет опыта</span>
-                    <span class="pill">Сопровождение проектов</span>
-                    <span class="pill">Комплексные решения</span>
-                  </div>
-                </div>
-
-                <div class="hero-right">
-                  <a class="btn btn--light" href="#consult"
-                    >Бесплатная консультация</a
-                  >
-                  <a class="btn btn--ghost" href="#services">Смотреть услуги</a>
-
-                  <div
-                    class="card"
-                    style="
-                      padding: 14px 16px;
-                      background: var(--surface);
-                      border: 1px solid var(--line);
-                      border-radius: 18px;
-                    "
-                  >
-                    <div
-                      style="display: flex; gap: 10px; align-items: flex-start"
-                    >
-                      <div
-                        style="
-                          width: 10px;
-                          height: 10px;
-                          border-radius: 999px;
-                          background: var(--accent);
-                          margin-top: 6px;
-                        "
-                      ></div>
-                      <div>
-                        <b>Короткий тезис</b>
-                        <div style="color: var(--muted); font-size: 13px">
-                          Lorem ipsum dolor sit amet, consectetur.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="dots" aria-hidden="true">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="about">
-          <div class="about-media" aria-hidden="true">
-            <div class="big"></div>
-            <div class="small"></div>
-          </div>
-
-          <div class="about-text">
-            <p class="subtitle">Lorem ipsum</p>
-            <h2 class="title">О компании</h2>
-            <p>
-              <b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
-              ad minim veniam, quis nostrud exercitation.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute
-              irure dolor in reprehenderit.
-            </p>
-
-            <div
-              style="
-                margin-top: 16px;
-                display: flex;
-                gap: 10px;
-                flex-wrap: wrap;
-              "
-            >
-              <a class="btn btn--primary" href="#projects">Наши проекты</a>
-              <a class="btn btn--ghost" href="#contacts">Связаться</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEAM -->
-    <section id="team" class="section section--tight">
-      <div class="container">
-        <div class="center">
-          <p class="subtitle">Lorem ipsum</p>
-          <h2 class="title">Наша команда</h2>
-          <p class="lead" style="margin: 0 auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-            odio. Praesent libero.
-          </p>
-        </div>
-
-        <div style="height: 20px"></div>
-
-        <div class="grid team-grid">
-          <a class="team-card" href="#">
-            <div class="team-photo"></div>
-            <div class="team-meta">
-              <b>Lorem Ipsum</b>
-              <small>Должность</small>
-            </div>
-          </a>
-
-          <a class="team-card" href="#">
-            <div class="team-photo"></div>
-            <div class="team-meta">
-              <b>Lorem Ipsum</b>
-              <small>Должность</small>
-            </div>
-          </a>
-
-          <a class="team-card" href="#">
-            <div class="team-photo"></div>
-            <div class="team-meta">
-              <b>Lorem Ipsum</b>
-              <small>Должность</small>
-            </div>
-          </a>
-
-          <a class="team-card" href="#">
-            <div class="team-photo"></div>
-            <div class="team-meta">
-              <b>Lorem Ipsum</b>
-              <small>Должность</small>
-            </div>
-          </a>
-
-          <a class="team-card" href="#">
-            <div class="team-photo"></div>
-            <div class="team-meta">
-              <b>Lorem Ipsum</b>
-              <small>Должность</small>
-            </div>
-          </a>
-
-          <a class="team-card" href="#">
-            <div class="team-photo"></div>
-            <div class="team-meta">
-              <b>Lorem Ipsum</b>
-              <small>Должность</small>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES / PROJECTS / CAREERS placeholders (чтобы меню не вело в пустоту) -->
-    <section id="services" class="section section--tight">
-      <div class="container">
-        <div class="card" style="padding: 22px">
-          <p class="subtitle">Раздел</p>
-          <h2 class="title" style="margin-top: 6px">Услуги</h2>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Здесь
-            потом сделаем список услуг/карточки.)
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section section--tight">
-      <div class="container">
-        <div class="card" style="padding: 22px">
-          <p class="subtitle">Раздел</p>
-          <h2 class="title" style="margin-top: 6px">Проекты</h2>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Здесь
-            потом кейсы/проекты.)
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="careers" class="section section--tight">
-      <div class="container">
-        <div class="card" style="padding: 22px">
-          <p class="subtitle">Раздел</p>
-          <h2 class="title" style="margin-top: 6px">Вакансии</h2>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Здесь
-            потом список вакансий.)
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLIENTS -->
-    <section class="section">
-      <div class="container">
-        <div class="center">
-          <p class="subtitle">Lorem ipsum</p>
-          <h2 class="title">Наши клиенты</h2>
-        </div>
-
-        <div style="height: 18px"></div>
-
-        <div class="marquee" aria-label="Лента клиентов (заглушки)">
-          <div class="marquee-track">
-            <!-- Дублируем набор дважды для бесшовности -->
-            <div class="logo-box">CLIENT 01</div>
-            <div class="logo-box">CLIENT 02</div>
-            <div class="logo-box">CLIENT 03</div>
-            <div class="logo-box">CLIENT 04</div>
-            <div class="logo-box">CLIENT 05</div>
-            <div class="logo-box">CLIENT 06</div>
-            <div class="logo-box">CLIENT 07</div>
-            <div class="logo-box">CLIENT 08</div>
-
-            <div class="logo-box">CLIENT 01</div>
-            <div class="logo-box">CLIENT 02</div>
-            <div class="logo-box">CLIENT 03</div>
-            <div class="logo-box">CLIENT 04</div>
-            <div class="logo-box">CLIENT 05</div>
-            <div class="logo-box">CLIENT 06</div>
-            <div class="logo-box">CLIENT 07</div>
-            <div class="logo-box">CLIENT 08</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONSULT FORM -->
-    <section id="consult" class="section">
-      <div class="container">
-        <div class="card">
-          <div class="form-wrap">
-            <div class="form-left">
-              <p class="subtitle">Контакт</p>
-              <h2 class="title">Получить консультацию</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
-                ad minim veniam, quis nostrud exercitation.
+              <span class="eyebrow">Консалтинг для собственников и CFO</span>
+              <h1>Наводим порядок в финансах, налогах и отчетности бизнеса</h1>
+              <p class="hero-lead">
+                Помогаем компаниям видеть реальные цифры, снижать налоговые
+                риски и принимать управленческие решения без догадок.
               </p>
-
-              <div class="divider"></div>
-
-              <div style="display: flex; gap: 10px; flex-wrap: wrap">
-                <span class="pill">Ответ в ближайшее рабочее время</span>
-                <span class="pill">Lorem ipsum</span>
+              <div class="hero-actions">
+                <a class="btn btn--light" href="#consult">Получить консультацию</a>
+                <a class="btn btn--ghost" href="#services">Смотреть услуги</a>
+              </div>
+              <div class="hero-proof" aria-label="Ключевые показатели">
+                <div>
+                  <b>10+</b>
+                  <span>лет опыта</span>
+                </div>
+                <div>
+                  <b>120+</b>
+                  <span>проектов</span>
+                </div>
+                <div>
+                  <b>24 ч</b>
+                  <span>до первого ответа</span>
+                </div>
               </div>
             </div>
 
-            <div class="form-right">
-              <form action="#" method="post">
-                <div class="fields">
-                  <input
-                    class="input"
-                    type="text"
-                    name="name"
-                    placeholder="Ваше имя"
-                    required
-                  />
-                  <input
-                    class="input"
-                    type="tel"
-                    name="phone"
-                    placeholder="+7 (...)"
-                    required
-                  />
-                  <input
-                    class="input"
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                  />
-                  <select class="input" name="service">
-                    <option value="" selected disabled>Выберите услугу</option>
-                    <option>Lorem ipsum 1</option>
-                    <option>Lorem ipsum 2</option>
-                    <option>Lorem ipsum 3</option>
-                  </select>
-                  <textarea
-                    class="input"
-                    name="message"
-                    placeholder="Сообщение"
-                  ></textarea>
-
-                  <button class="btn btn--primary" type="submit">
-                    Отправить заявку
-                  </button>
-                  <div class="consent">
-                    Lorem ipsum: даю согласие на обработку персональных данных
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contacts">
-      <div class="foot-top">
-        <div class="container">
-          <div class="row">
-            <p>
-              По всем вопросам пишите на:
-              <a href="mailto:info@company.kz" style="color: var(--accent)"
-                >info@company.kz</a
-              >
-            </p>
-            <a class="btn btn--primary" href="#consult"
-              >Получить консультацию</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <div class="foot-bottom">
-        <div class="container">
-          <div class="foot-grid">
-            <div>
-              <a class="logo" href="#">
-                <div class="logo-mark" aria-hidden="true"></div>
-                <div class="logo-text">
-                  <b>CONSULTING</b>
-                  <small>Lorem ipsum</small>
-                </div>
-              </a>
-              <div class="copyright">
-                © <span id="y"></span> Lorem ipsum dolor sit amet.
-              </div>
-            </div>
-
-            <div>
-              <ul class="foot-menu">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#about">О компании</a></li>
-                <li><a href="#team">Команда</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#projects">Проекты</a></li>
-                <li><a href="#careers">Вакансии</a></li>
-                <li><a href="#consult">Консультация</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+            <aside class="hero-panel" aria-label="Фокус работы">
+              <span class="panel-label">Фокус</span>
+              <h2>Финансовая ясность без лишней бюрократии</h2>
+              <p>
+                Быстро находим узкие места, собираем понятную картину и
+                превращаем рекомендации в рабочий план.
+              </p>
+              <ul class="check-list">
+                <li>Диагностика финансовой модели</li>
+                <li>Налоговая карта рисков</li>
+                <li>Управленческая отчетность</li>
               </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="split">
+            <div>
+              <span class="eyebrow">О компании</span>
+              <h2 class="title">Партнер для сложных финансовых решений</h2>
+              <p class="lead">
+                Kenes Consulting работает с компаниями, которым важно видеть
+                экономику бизнеса целиком: от налоговой нагрузки и денежных
+                потоков до управленческой отчетности и инвестиционных решений.
+              </p>
+            </div>
+            <div class="about-card">
+              <p>
+                Мы не ограничиваемся презентацией. Команда погружается в цифры,
+                процессы и документы, чтобы предложить решения, которые можно
+                внедрить в реальной операционной среде.
+              </p>
+              <div class="metrics">
+                <div><b>35%</b><span>среднее сокращение ручной отчетности</span></div>
+                <div><b>3-6</b><span>недель до первых внедрений</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section section--muted">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Услуги</span>
+            <h2 class="title">Что усиливаем в бизнесе</h2>
+            <p class="lead">
+              Берем задачи точечно или сопровождаем компанию комплексно.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-icon">01</span>
+              <h3>Финансовый консалтинг</h3>
+              <p>
+                Финансовая модель, P&L, cash flow, бюджетирование и регулярная
+                отчетность для собственников.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">02</span>
+              <h3>Налоги и комплаенс</h3>
+              <p>
+                Проверяем риски, готовим налоговую позицию и помогаем выстроить
+                спокойную работу с требованиями.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">03</span>
+              <h3>Аудит процессов</h3>
+              <p>
+                Ищем потери, дублирование, слабые контрольные точки и
+                превращаем аудит в понятную дорожную карту.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">04</span>
+              <h3>Сопровождение сделок</h3>
+              <p>
+                Финансовая проверка контрагентов, due diligence, оценка
+                сценариев и подготовка материалов для переговоров.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Кейсы</span>
+            <h2 class="title">Результаты, которые можно измерить</h2>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card">
+              <span>Производство</span>
+              <h3>Собрали управленческую отчетность за 21 день</h3>
+              <p>
+                Разделили операционные и инвестиционные потоки, настроили
+                ежемесячный пакет отчетов для совета директоров.
+              </p>
+            </article>
+            <article class="case-card">
+              <span>Ритейл</span>
+              <h3>Снизили налоговые риски перед масштабированием</h3>
+              <p>
+                Провели экспресс-аудит договоров и операций, подготовили карту
+                корректировок и регламент проверки новых поставщиков.
+              </p>
+            </article>
+            <article class="case-card">
+              <span>Сервисная компания</span>
+              <h3>Вернули контроль над денежными разрывами</h3>
+              <p>
+                Внедрили платежный календарь, правила приоритизации оплат и
+                прогноз движения денег на 13 недель.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="section section--muted">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Команда</span>
+            <h2 class="title">С вами работают практики</h2>
+            <p class="lead">
+              Финансисты, налоговые консультанты и аудиторы с опытом в
+              реальном секторе, торговле и сервисных компаниях.
+            </p>
+          </div>
+
+          <div class="team-grid">
+            <article class="team-card">
+              <div class="team-photo photo-1" aria-hidden="true"></div>
+              <div class="team-meta">
+                <b>Айдана Сарсенова</b>
+                <span>Партнер, финансы</span>
+              </div>
+            </article>
+            <article class="team-card">
+              <div class="team-photo photo-2" aria-hidden="true"></div>
+              <div class="team-meta">
+                <b>Тимур Алиев</b>
+                <span>Налоговый консультант</span>
+              </div>
+            </article>
+            <article class="team-card">
+              <div class="team-photo photo-3" aria-hidden="true"></div>
+              <div class="team-meta">
+                <b>Мария Ким</b>
+                <span>Руководитель проектов</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="careers" class="section">
+        <div class="container">
+          <div class="career-band">
+            <div>
+              <span class="eyebrow">Вакансии</span>
+              <h2 class="title">Ищем внимательных людей в команду</h2>
+              <p class="lead">
+                Если вы любите цифры, порядок и понятную коммуникацию с
+                клиентами, нам будет интересно познакомиться.
+              </p>
+            </div>
+            <a class="btn btn--primary" href="mailto:hr@company.kz">Отправить резюме</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="consult" class="section consult-section">
+        <div class="container">
+          <div class="form-card">
+            <div class="form-copy">
+              <span class="eyebrow">Консультация</span>
+              <h2 class="title">Расскажите, что нужно усилить</h2>
+              <p>
+                Ответим в ближайшее рабочее время, уточним задачу и предложим
+                первый понятный шаг.
+              </p>
+              <div class="contact-lines">
+                <a href="mailto:info@company.kz">info@company.kz</a>
+                <a href="tel:+77000000000">+7 700 000 00 00</a>
+              </div>
             </div>
 
-            <div>
-              <div class="social">
-                <a class="soc-btn" href="#" aria-label="Telegram"
-                  ><span class="icon" aria-hidden="true"></span
-                ></a>
-                <a class="soc-btn" href="#" aria-label="WhatsApp"
-                  ><span class="icon" aria-hidden="true"></span
-                ></a>
-                <a class="soc-btn" href="#" aria-label="Instagram"
-                  ><span class="icon" aria-hidden="true"></span
-                ></a>
-              </div>
-              <div class="copyright" style="text-align: right">
-                Lorem ipsum dolor sit amet, consectetur.
-              </div>
-            </div>
+            <form class="contact-form" action="#" method="post">
+              <input class="input" type="text" name="name" placeholder="Ваше имя" required />
+              <input class="input" type="tel" name="phone" placeholder="+7 (___) ___ __ __" required />
+              <input class="input" type="email" name="email" placeholder="Email" />
+              <select class="input" name="service" required>
+                <option value="" selected disabled>Какая задача актуальна?</option>
+                <option>Финансовый консалтинг</option>
+                <option>Налоги и комплаенс</option>
+                <option>Аудит процессов</option>
+                <option>Сопровождение сделки</option>
+              </select>
+              <textarea class="input" name="message" placeholder="Кратко опишите ситуацию"></textarea>
+              <button class="btn btn--primary" type="submit">Отправить заявку</button>
+              <p class="consent">
+                Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacts">
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <a class="logo" href="#" aria-label="Kenes Consulting">
+              <span class="logo-mark" aria-hidden="true">K</span>
+              <span class="logo-text">
+                <b>Kenes Consulting</b>
+                <small>Finance & Tax Advisory</small>
+              </span>
+            </a>
+            <p class="copyright">
+              © <span id="y"></span> Kenes Consulting. Все права защищены.
+            </p>
+          </div>
+          <div class="foot-links">
+            <a href="#about">О компании</a>
+            <a href="#services">Услуги</a>
+            <a href="#projects">Кейсы</a>
+            <a href="#team">Команда</a>
+            <a href="#careers">Вакансии</a>
+            <a href="#consult">Консультация</a>
+          </div>
+          <div class="foot-contact">
+            <a href="mailto:info@company.kz">info@company.kz</a>
+            <a href="tel:+77000000000">+7 700 000 00 00</a>
+            <span>Алматы, Казахстан</span>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Floating buttons -->
     <div class="fixed-bts" aria-label="Быстрые контакты">
-      <a href="#" aria-label="WhatsApp"
-        ><span class="icon" aria-hidden="true"></span
-      ></a>
-      <a href="#" aria-label="Telegram"
-        ><span class="icon" aria-hidden="true"></span
-      ></a>
-      <a href="#" aria-label="Instagram"
-        ><span class="icon" aria-hidden="true"></span
-      ></a>
+      <a href="https://wa.me/77000000000" aria-label="WhatsApp">WA</a>
+      <a href="https://t.me/" aria-label="Telegram">TG</a>
     </div>
 
     <script>
-      // мелочь для года в футере
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
   </body>
