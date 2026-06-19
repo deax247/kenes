@@ -5,438 +5,430 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="KENES сопровождает компании по вопросам таможенного аудита, подготовки документов, проверок и оспаривания результатов."
+      content="KENES — казахстанская консалтинговая компания в сфере таможенного и налогового регулирования, GR и инвестиционного сопровождения."
     />
-    <title>KENES — таможенный консалтинг и сопровождение проверок</title>
+    <title>KENES — консалтинг и сопровождение бизнеса</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header class="site-header">
-      <div class="container">
-        <div class="head">
-          <a class="logo" href="#" aria-label="KENES">
-            <span class="logo-mark" aria-hidden="true">K</span>
-            <span class="logo-text">
-              <b>KENES</b>
-              <small>Customs & Legal Advisory</small>
-            </span>
-          </a>
+      <div class="header-inner">
+        <a class="header-logo" href="#" aria-label="KENES">
+          <img src="assets/logo.png" alt="KENES" width="140" height="40" />
+        </a>
 
-          <input id="menuToggle" type="checkbox" />
-          <label class="burger" for="menuToggle" aria-label="Открыть меню">
-            <span></span>
-          </label>
+        <nav class="header-nav" aria-label="Основное меню">
+          <a href="#about" data-i18n="nav.about">О нас</a>
+          <a href="#services" data-i18n="nav.services">Услуги KENES</a>
+          <a href="#team" data-i18n="nav.team">Команда KENES</a>
+          <a href="#events" data-i18n="nav.events">События</a>
+        </nav>
 
-          <nav aria-label="Основное меню">
-            <ul>
-              <li><a href="#about">О компании</a></li>
-              <li><a href="#services">Услуги</a></li>
-              <li><a href="#team">Команда</a></li>
-              <li><a href="#clients">Клиенты</a></li>
-              <li><a href="#contacts">Контакты</a></li>
-            </ul>
-          </nav>
-
-          <div class="head-actions">
-            <a class="btn btn--primary" href="#consult">Обсудить проверку</a>
-          </div>
+        <div class="header-right">
+          <a class="header-contacts" href="#contacts" data-i18n="nav.contacts">Контакты</a>
+          <button class="lang-toggle" type="button" aria-label="Сменить язык">
+            <span class="lang-toggle__label lang-toggle__label--ru">RU</span>
+            <span class="lang-toggle__divider">/</span>
+            <span class="lang-toggle__label lang-toggle__label--kk">KZ</span>
+          </button>
         </div>
 
-        <div class="mobile-drawer" aria-label="Мобильное меню">
-          <a href="#about">О компании</a>
-          <a href="#services">Услуги</a>
-          <a href="#team">Команда</a>
-          <a href="#clients">Клиенты</a>
-          <a href="#contacts">Контакты</a>
-          <a class="btn btn--primary" href="#consult">Обсудить проверку</a>
-        </div>
+        <input id="menuToggle" type="checkbox" class="menu-toggle-input" />
+        <label class="burger" for="menuToggle" aria-label="Открыть меню">
+          <span></span>
+        </label>
+      </div>
+
+      <div class="mobile-drawer" aria-label="Мобильное меню">
+        <a href="#about" data-i18n="nav.about">О нас</a>
+        <a href="#services" data-i18n="nav.services">Услуги KENES</a>
+        <a href="#team" data-i18n="nav.team">Команда KENES</a>
+        <a href="#events" data-i18n="nav.events">События</a>
+        <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+        <button class="lang-toggle lang-toggle--mobile" type="button" aria-label="Сменить язык">
+          <span class="lang-toggle__label lang-toggle__label--ru">RU</span>
+          <span class="lang-toggle__divider">/</span>
+          <span class="lang-toggle__label lang-toggle__label--kk">KZ</span>
+        </button>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <div class="hero-shell">
-            <div class="hero-media" aria-hidden="true"></div>
-            <div class="hero-content">
-              <span class="eyebrow">Таможенный консалтинг и правовая защита</span>
-              <h1>Сопровождаем проверки и защищаем позицию бизнеса</h1>
-              <p class="hero-lead">
-                KENES помогает компаниям подготовиться к таможенной проверке,
-                собрать доказательную базу, пройти взаимодействие с проверяющими
-                и оспорить результаты при необходимости.
-              </p>
-              <div class="hero-actions">
-                <a class="btn btn--light" href="#consult">Получить консультацию</a>
-                <a class="btn btn--ghost" href="#services">Смотреть услуги</a>
-              </div>
-              <div class="hero-proof" aria-label="Ключевые показатели">
-                <div>
-                  <b>20+</b>
-                  <span>лет экспертизы у управляющего партнера</span>
-                </div>
-                <div>
-                  <b>26</b>
-                  <span>лет юридической практики у партнера</span>
-                </div>
-                <div>
-                  <b>5</b>
-                  <span>крупных клиентов в портфеле</span>
-                </div>
-              </div>
-            </div>
-
-            <aside class="hero-panel" aria-label="Фокус работы">
-              <span class="panel-label">Фокус</span>
-              <h2>От анализа деклараций до суда</h2>
-              <p>
-                Команда закрывает весь контур работы: аудит ДТ, подготовка
-                документов, сопровождение проверки и защита позиции компании.
-              </p>
-              <ul class="check-list">
-                <li>Анализ ТН ВЭД, стоимости и заполнения ДТ</li>
-                <li>База документов по каждой декларации</li>
-                <li>Возражения, жалобы в КГД и представительство в суде</li>
-              </ul>
-            </aside>
-          </div>
+      <section class="hero" aria-label="Главный экран">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="hero-tagline">
+            Предвидим риски. Защищаем бизнес. Создаем уверенность.
+          </p>
         </div>
+        <a class="btn btn--brand hero-cta" href="#contacts" data-i18n="hero.cta">
+          Связаться с нами
+        </a>
       </section>
 
-      <section id="about" class="section">
-        <div class="container">
-          <div class="split">
-            <div>
-              <span class="eyebrow">О компании</span>
-              <h2 class="title">KENES работает там, где важны опыт и точность</h2>
-              <p class="lead">
-                Компания специализируется на вопросах таможенного регулирования,
-                юридического сопровождения проверок и выработке аргументированной
-                позиции для бизнеса.
-              </p>
-            </div>
-            <div class="about-card">
-              <p>
-                Экспертиза команды объединяет опыт работы в таможенных органах,
-                Министерстве финансов РК, крупных национальных компаниях,
-                международном консалтинге и частной юридической практике.
-              </p>
-              <div class="metrics">
-                <div><b>69</b><span>лет совокупного профессионального стажа партнеров</span></div>
-                <div><b>4</b><span>ключевых направления сопровождения проверки</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section section--muted">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">Услуги KENES</span>
-            <h2 class="title">Комплексное сопровождение таможенных проверок</h2>
-            <p class="lead">
-              От предварительного аудита до защиты позиции в суде.
+      <section id="about" class="section section--about">
+        <div class="section-inner">
+          <span class="section-label" data-i18n="about.label">О нас</span>
+          <div class="about-text">
+            <p>
+              KENES — казахстанская консалтинговая компания, специализирующаяся на
+              сопровождении взаимодействия с государственными органами, таможенном и
+              налоговом регулировании внешнеэкономической деятельности, а также
+              инвестиционном консалтинге.
+            </p>
+            <p>
+              Команда KENES — это эксперты с более чем 20-летним опытом в таможенном и
+              налоговом регулировании, работе в государственных органах, международном
+              бизнесе и ведущих консалтинговых компаниях мира, включая Big Four. Такой
+              опыт позволяет нам разрабатывать практические решения, объединяющие
+              регуляторную экспертизу и понимание бизнес-реалий.
+            </p>
+            <p>
+              KENES придерживается принципов законности, профессионализма, прозрачности и
+              ответственности. Мы убеждены, что устойчивые результаты достигаются
+              благодаря глубоким экспертным знаниям, соблюдению высоких этических
+              стандартов и долгосрочному партнерству с клиентами.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div class="service-detail-grid">
-            <article class="service-detail-card">
-              <span class="service-icon">01</span>
-              <h3>Аудит</h3>
-              <p>
-                Анализ 10 деклараций на товары, выбранных по разным критериям
-                риска.
-              </p>
+      <section id="services" class="section section--services">
+        <div class="section-inner">
+          <span class="section-label" data-i18n="services.label">Услуги KENES</span>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <h3>Таможенное регулирование</h3>
               <ul>
-                <li>Проверка классификации по ТН ВЭД</li>
-                <li>Анализ определения таможенной стоимости</li>
-                <li>Проверка заполнения ДТ и связанных сведений</li>
+                <li>Таможенный аудит и диагностика рисков</li>
+                <li>Подготовка и сопровождение таможенных проверок</li>
+                <li>Обжалование решений таможенных органов</li>
+                <li>Классификация товаров и таможенная стоимость</li>
+                <li>Таможенный комплаенс</li>
+                <li>Консультирование по вопросам ВЭД</li>
+                <li>Обучение и развитие компетенций сотрудников</li>
               </ul>
+              <p class="service-summary">
+                KENES помогает бизнесу снижать таможенные риски, предотвращать
+                финансовые потери и уверенно проходить контрольные мероприятия.
+              </p>
             </article>
 
-            <article class="service-detail-card">
-              <span class="service-icon">02</span>
-              <h3>Подготовка документов</h3>
-              <p>
-                Координация предварительной подготовки документов и сведений до
-                начала проверки.
-              </p>
+            <article class="service-card">
+              <h3>Инвестиционное сопровождение</h3>
               <ul>
-                <li>Сбор основных документов и электронных копий</li>
-                <li>Структурирование материалов по каждой ДТ</li>
-                <li>Готовая база документов для проверки</li>
+                <li>Подготовка и структурирование инвестиционных проектов</li>
+                <li>Получение инвестиционных преференций и мер государственной поддержки</li>
+                <li>Сопровождение инвестиционных контрактов</li>
+                <li>Взаимодействие с государственными органами</li>
+                <li>Регуляторное и разрешительное сопровождение</li>
+                <li>GR-поддержка инвестиционных инициатив</li>
+                <li>Сопровождение иностранных инвесторов</li>
               </ul>
+              <p class="service-summary">
+                KENES помогает инвесторам эффективно реализовывать проекты в Казахстане,
+                минимизировать административные барьеры и выстраивать конструктивный
+                диалог с государством.
+              </p>
             </article>
 
-            <article class="service-detail-card">
-              <span class="service-icon">03</span>
-              <h3>Сопровождение проверки</h3>
-              <p>
-                Участие и представление интересов компании в ходе проверки.
-              </p>
+            <article class="service-card">
+              <h3>Government Relations (GR)</h3>
               <ul>
-                <li>Представление истребованных документов</li>
-                <li>Взаимодействие с проверяющими</li>
-                <li>Подготовка разъяснений по вопросам проверки</li>
+                <li>Защита интересов бизнеса перед государственными органами</li>
+                <li>Регуляторный и законодательный мониторинг</li>
+                <li>Сопровождение инвестиционных проектов</li>
+                <li>Таможенное и налоговое GR-сопровождение</li>
+                <li>Подготовка законодательных инициатив</li>
+                <li>Управление регуляторными рисками</li>
+                <li>Антикризисное сопровождение</li>
+                <li>Разработка и реализация GR-стратегий</li>
               </ul>
+              <p class="service-summary">
+                KENES помогает бизнесу выстраивать эффективный диалог с государством,
+                минимизировать регуляторные риски и создавать условия для устойчивого
+                развития.
+              </p>
             </article>
 
-            <article class="service-detail-card">
-              <span class="service-icon">04</span>
-              <h3>Оспаривание результатов</h3>
-              <p>
-                Анализ правомерности результатов проверки и корректности
-                произведенных доначислений.
-              </p>
+            <article class="service-card">
+              <h3>Трансфертное ценообразование</h3>
               <ul>
-                <li>Выработка аргументов и текста возражений</li>
-                <li>Подготовка жалоб в КГД, Минфин и суд</li>
-                <li>Участие на судебных заседаниях</li>
+                <li>Диагностика рисков и аудит сделок</li>
+                <li>Подготовка документации по ТЦО</li>
+                <li>Анализ рыночного уровня цен</li>
+                <li>Бенчмаркинговые исследования</li>
+                <li>Сопровождение налоговых проверок</li>
+                <li>Обжалование результатов контроля</li>
+                <li>Международное налоговое консультирование</li>
+              </ul>
+              <p class="service-summary">
+                KENES помогает компаниям обеспечивать соответствие требованиям
+                законодательства о трансфертном ценообразовании, снижать налоговые риски
+                и защищать свои интересы при взаимодействии с государственными органами.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <h3>Финансирование и инвестиции</h3>
+              <ul>
+                <li>Привлечение финансирования в банках второго уровня</li>
+                <li>Сопровождение проектов в институтах развития</li>
+                <li>Структурирование инвестиционных и проектных сделок</li>
+                <li>Подготовка бизнес-планов и финансовых моделей</li>
+                <li>Международное финансирование</li>
+                <li>Государственные меры финансовой поддержки</li>
+              </ul>
+              <p class="service-summary">
+                KENES помогает бизнесу привлекать капитал, выстраивать эффективные
+                отношения с финансовыми институтами и реализовывать проекты любой
+                сложности.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <h3>Услуги по копирайтингу и коммуникациям</h3>
+              <ul>
+                <li>Копирайтинг и редактура текстов (статьи, посты, рекламные материалы)</li>
+                <li>Ведение личных и корпоративных страниц в социальных сетях</li>
+                <li>Разработка контент-стратегии и контент-планов</li>
+                <li>Подготовка публичных выступлений (речи, презентации, спичрайтинг)</li>
+                <li>Создание продающих текстов и лид-магнитов</li>
+                <li>Подготовка официальных писем, деловой переписки и документов</li>
+                <li>Адаптация текстов под разные аудитории и площадки</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="team" class="section">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">Команда KENES</span>
-            <h2 class="title">Партнеры с опытом в государственном секторе и бизнесе</h2>
-            <p class="lead">
-              Пока вы пришлете реальные фотографии, используются аккуратные
-              временные портреты-заглушки.
-            </p>
+      <section id="team" class="section section--team">
+        <article class="team-feature">
+          <div class="team-feature__profile">
+            <div class="team-feature__photo">
+              <img
+                src="assets/team-almat.jpg"
+                alt="Жукебаев Алмат"
+                width="400"
+                height="500"
+              />
+            </div>
+            <div class="team-feature__identity">
+              <h3>Жукебаев Алмат</h3>
+              <p>Директор_Управляющий партнер ТОО "GR Kenes"</p>
+            </div>
           </div>
-
-          <div class="team-profile-grid">
-            <article class="team-profile-card">
-              <div class="team-portrait photo-1" aria-hidden="true"></div>
-              <div class="team-profile-body">
-                <span class="team-role">Управляющий партнер</span>
-                <h3>Жукебаев Алмат</h3>
-                <p class="profile-summary">
-                  20 лет профессионального стажа в таможенном регулировании,
-                  трансфертном ценообразовании, консалтинге и управлении.
+          <div class="team-feature__bio">
+            <h4>Профессиональный опыт (более 20 лет профессионального стажа):</h4>
+            <div class="experience-list">
+              <div class="experience-item">
+                <p class="experience-period">
+                  2005–2009 — Департамент таможенного контроля по г. Астана, главный
+                  специалист, начальник отдела
                 </p>
-                <div class="timeline">
-                  <span>2005-2009 — Департамент таможенного контроля по г. Астана</span>
-                  <span>2009-2011 — Минфин РК, начальник управления таможенной политики</span>
-                  <span>2011-2020 — АО «КазМунайГаз», эксперт по таможенному регулированию</span>
-                  <span>2020-2022 — KPMG, руководитель группы таможенного консалтинга</span>
-                  <span>2022-2025 — АО «СПК «ҰЛЫТАУ», председатель правления</span>
-                </div>
-                <div class="profile-tags">
-                  <span>МГУ им. М.В. Ломоносова</span>
-                  <span>ЕНУ им. Л.Н. Гумилева</span>
-                  <span>Налоговый консультант РК 1-й категории</span>
-                  <span>Палата налоговых консультантов РК</span>
-                  <span>Юридическая палата «Юстус»</span>
-                </div>
+                <p class="experience-detail">
+                  Практическая реализация функций таможенного аудита и рискового
+                  контроля.
+                </p>
               </div>
-            </article>
+              <div class="experience-item">
+                <p class="experience-period">
+                  2009–2011 — Министерство финансов Республики Казахстан, Начальник
+                  управления таможенной политики
+                </p>
+                <p class="experience-detail">
+                  Руководство Управлением таможенной политики;<br />
+                  Участие в разработке ключевых соглашений Таможенного союза и ЕАЭС,
+                  включая Таможенный кодекс ЕАЭС;<br />
+                  Член рабочей группы по разработке Таможенного кодекса Республики
+                  Казахстан;<br />
+                  Участие в межгосударственных консультациях и экспертных процедурах по
+                  вопросам торгово-экономического сотрудничества.
+                </p>
+              </div>
+              <div class="experience-item">
+                <p class="experience-period">
+                  2011–2020 — АО «Национальная компания «КазМунайГаз», Эксперт по
+                  вопросам таможенного регулирования и трансфертного ценообразования
+                </p>
+                <p class="experience-detail">
+                  Координация таможенных вопросов группы компаний;<br />
+                  Сопровождение крупных инвестиционных проектов в нефтегазовой
+                  отрасли;<br />
+                  Разработка и продвижение законодательных инициатив в сфере таможенного
+                  и налогового регулирования на национальном уровне и в рамках ЕАЭС;<br />
+                  Сопровождение судебных споров по вопросам таможенного регулирования и
+                  трансфертного ценообразования.
+                </p>
+              </div>
+              <div class="experience-item">
+                <p class="experience-period">
+                  2020–2022 — KPMG, Руководитель группы таможенного консалтинга
+                </p>
+                <p class="experience-detail">
+                  Консультирование транснациональных компаний по вопросам таможенного
+                  регулирования;<br />
+                  Проведение таможенного и регуляторного аудита;<br />
+                  Управление рисками и взаимодействие с таможенными органами.
+                </p>
+              </div>
+              <div class="experience-item">
+                <p class="experience-period">
+                  2022–2025 — АО «Социально-предпринимательская корпорация «Улытау»,
+                  Председатель Правления
+                </p>
+                <p class="experience-detail">
+                  Привлечение инвестиций и развитие инвестиционной привлекательности
+                  региона;<br />
+                  Взаимодействие с иностранными инвесторами, включая компании из КНР;<br />
+                  Сопровождение и реализация инвестиционных проектов на региональном
+                  уровне.
+                </p>
+              </div>
+              <div class="experience-item">
+                <p class="experience-period">С 2025 года — KENES</p>
+                <p class="experience-detail">
+                  Директор и управляющий партнёр.компании из КНР;<br />
+                  Сопровождение и реализация инвестиционных проектов на региональном
+                  уровне.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
 
-            <article class="team-profile-card">
-              <div class="team-portrait photo-2" aria-hidden="true"></div>
-              <div class="team-profile-body">
-                <span class="team-role">Партнер по юридической практике</span>
+        <div class="team-duo">
+          <article class="team-feature team-feature--compact">
+            <div class="team-feature__profile">
+              <div class="team-feature__photo team-feature__photo--placeholder">
+                <span aria-hidden="true">KK</span>
+              </div>
+              <div class="team-feature__identity">
                 <h3>Кунаев Куаныш</h3>
-                <p class="profile-summary">
-                  26 лет профессионального стажа в таможенных органах, правовом
-                  управлении и частной юридической практике.
-                </p>
-                <div class="timeline">
-                  <span>1999-2005 — ГТУ по Костанайской области, инспектор, начальник отдела</span>
-                  <span>2005-2014 — КТК РК, руководитель правового управления</span>
-                  <span>2015-2025 — частная юридическая практика</span>
-                </div>
-                <div class="profile-tags">
-                  <span>Костанайский государственный университет</span>
-                  <span>Член Палаты «Confidence & law»</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="team-profile-card">
-              <div class="team-portrait photo-3" aria-hidden="true"></div>
-              <div class="team-profile-body">
-                <span class="team-role">Партнер по GR</span>
-                <h3>Жамбулов Ержан</h3>
-                <p class="profile-summary">
-                  23 года профессионального стажа в таможенных органах,
-                  налоговой политике, правительственном аппарате и транспортной
-                  отрасли.
-                </p>
-                <div class="timeline">
-                  <span>2002-2011 — Комитет таможенного контроля, инспектор, начальник отдела</span>
-                  <span>2012-2017 — МНЭ РК, заместитель директора департамента налоговой политики</span>
-                  <span>2015-2023 — Канцелярия Премьер-Министра РК, заместитель заведующего отделом</span>
-                  <span>2023-2024 — ТОО «КТЖ - Грузовые перевозки», заместитель директора</span>
-                </div>
-                <div class="profile-tags">
-                  <span>Казахская государственная академия</span>
-                  <span>КРУ</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="clients" class="section section--muted">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">Клиенты KENES</span>
-            <h2 class="title">Компании, которые уже работали с командой</h2>
-            <p class="lead">
-              Логотипы временные. Когда вы пришлете фирменные файлы, я заменю
-              эти блоки на реальные знаки клиентов.
-            </p>
-          </div>
-
-          <div class="clients-grid">
-            <article class="client-card">
-              <div class="client-logo">WOOD<br />KSS</div>
-              <div>
-                <h3>ТОО «Wood KSS»</h3>
-                <p>
-                  Совместное предприятие Wood Plc и АО «НГСК «КазСтройСервис»,
-                  предоставляющее услуги по проектированию и строительству в
-                  нефтегазовой и промышленной отраслях РК с 2007 года.
-                </p>
-              </div>
-            </article>
-
-            <article class="client-card">
-              <div class="client-logo">CHINT<br />KZ</div>
-              <div>
-                <h3>АО «CHINT KZ»</h3>
-                <p>
-                  Ведущий мировой поставщик интеллектуальных решений в области
-                  производства и распределения электроэнергии, интеллектуальной
-                  электроники и автоматизации производства.
-                </p>
-              </div>
-            </article>
-
-            <article class="client-card">
-              <div class="client-logo">KMG<br />D&S</div>
-              <div>
-                <h3>АО «KMG Drilling&Services»</h3>
-                <p>
-                  Лидирующая компания в области буровых работ, предоставляющая
-                  широкий спектр услуг по бурению и строительству нефтяных
-                  скважин в казахстанском секторе Каспийского моря.
-                </p>
-              </div>
-            </article>
-
-            <article class="client-card">
-              <div class="client-logo">VMZ</div>
-              <div>
-                <h3>АО «Востокмашзавод»</h3>
-                <p>
-                  Одно из крупнейших машиностроительных и металлургических
-                  предприятий Казахстана с широкопрофильным производством для
-                  горнорудных и металлургических предприятий.
-                </p>
-              </div>
-            </article>
-
-            <article class="client-card client-card--wide">
-              <div class="client-logo">GREEN<br />CAPITAL</div>
-              <div>
-                <h3>ТОО «Green Capital Kazakhstan»</h3>
-                <p>
-                  Крупнейшая агропромышленная компания, специализирующаяся на
-                  выращивании овощей в тепличном комплексе пятого поколения,
-                  запущенном с участием голландских инвестиций и технологий
-                  Ultra Clima от KUBO Group.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="consult" class="section consult-section">
-        <div class="container">
-          <div class="form-card">
-            <div class="form-copy">
-              <span class="eyebrow">Консультация</span>
-              <h2 class="title">Расскажите о проверке или риске</h2>
-              <p>
-                Команда уточнит контекст, определит первичные документы и
-                предложит следующий шаг по защите позиции компании.
-              </p>
-              <div class="contact-lines">
-                <a href="mailto:info@company.kz">info@company.kz</a>
-                <a href="tel:+77000000000">+7 700 000 00 00</a>
+                <p>Партнер по юридической практике</p>
               </div>
             </div>
+            <div class="team-feature__bio">
+              <h4>Профессиональный опыт (более 26 лет профессионального стажа):</h4>
+              <div class="experience-list">
+                <div class="experience-item">
+                  <p class="experience-period">
+                    1999–2005 — ГТУ по Костанайской области, инспектор, начальник отдела
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <p class="experience-period">
+                    2005–2014 — КТК РК, руководитель правового управления
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <p class="experience-period">2015–2025 — частная юридическая практика</p>
+                </div>
+              </div>
+            </div>
+          </article>
 
-            <form class="contact-form" action="#" method="post">
-              <input class="input" type="text" name="name" placeholder="Ваше имя" required />
-              <input class="input" type="tel" name="phone" placeholder="+7 (___) ___ __ __" required />
-              <input class="input" type="email" name="email" placeholder="Email" />
-              <select class="input" name="service" required>
-                <option value="" selected disabled>Какая услуга актуальна?</option>
-                <option>Аудит</option>
-                <option>Подготовка документов</option>
-                <option>Сопровождение проверки</option>
-                <option>Оспаривание результатов проверки</option>
-              </select>
-              <textarea class="input" name="message" placeholder="Кратко опишите ситуацию"></textarea>
-              <button class="btn btn--primary" type="submit">Отправить заявку</button>
-              <p class="consent">
-                Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
-              </p>
-            </form>
-          </div>
+          <article class="team-feature team-feature--compact">
+            <div class="team-feature__profile">
+              <div class="team-feature__photo team-feature__photo--placeholder">
+                <span aria-hidden="true">ЕЖ</span>
+              </div>
+              <div class="team-feature__identity">
+                <h3>Жамбулов Ержан</h3>
+                <p>Партнер по GR</p>
+              </div>
+            </div>
+            <div class="team-feature__bio">
+              <h4>Профессиональный опыт (более 23 лет профессионального стажа):</h4>
+              <div class="experience-list">
+                <div class="experience-item">
+                  <p class="experience-period">
+                    2002–2011 — Комитет таможенного контроля, инспектор, начальник
+                    отдела
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <p class="experience-period">
+                    2012–2017 — МНЭ РК, заместитель директора департамента налоговой
+                    политики
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <p class="experience-period">
+                    2015–2023 — Канцелярия Премьер-Министра РК, заместитель заведующего
+                    отделом
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <p class="experience-period">
+                    2023–2024 — ТОО «КТЖ - Грузовые перевозки», заместитель директора
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
+
+      <section id="events" class="section section--placeholder" aria-hidden="true"></section>
+      <section id="contacts" class="section section--placeholder" aria-hidden="true"></section>
     </main>
 
-    <footer id="contacts">
-      <div class="container">
-        <div class="foot-grid">
-          <div>
-            <a class="logo" href="#" aria-label="KENES">
-              <span class="logo-mark" aria-hidden="true">K</span>
-              <span class="logo-text">
-                <b>KENES</b>
-                <small>Customs & Legal Advisory</small>
-              </span>
-            </a>
-            <p class="copyright">
-              © <span id="y"></span> KENES. Все права защищены.
-            </p>
-          </div>
-          <div class="foot-links">
-            <a href="#about">О компании</a>
-            <a href="#services">Услуги</a>
-            <a href="#team">Команда</a>
-            <a href="#clients">Клиенты</a>
-            <a href="#consult">Консультация</a>
-          </div>
-          <div class="foot-contact">
-            <a href="mailto:info@company.kz">info@company.kz</a>
-            <a href="tel:+77000000000">+7 700 000 00 00</a>
-            <span>Астана, Казахстан</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <div class="fixed-bts" aria-label="Быстрые контакты">
-      <a href="https://wa.me/77000000000" aria-label="WhatsApp">WA</a>
-      <a href="https://t.me/" aria-label="Telegram">TG</a>
-    </div>
-
     <script>
-      document.getElementById("y").textContent = new Date().getFullYear();
+      const i18n = {
+        ru: {
+          "nav.about": "О нас",
+          "nav.services": "Услуги KENES",
+          "nav.team": "Команда KENES",
+          "nav.events": "События",
+          "nav.contacts": "Контакты",
+          "hero.cta": "Связаться с нами",
+          "about.label": "О нас",
+          "services.label": "Услуги KENES",
+        },
+        kk: {
+          "nav.about": "Біз туралы",
+          "nav.services": "KENES қызметтері",
+          "nav.team": "KENES командасы",
+          "nav.events": "Оқиғалар",
+          "nav.contacts": "Байланыс",
+          "hero.cta": "Бізбен байланысыңыз",
+          "about.label": "Біз туралы",
+          "services.label": "KENES қызметтері",
+        },
+      };
+
+      let currentLang = "ru";
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+        document.body.dataset.lang = lang;
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.dataset.i18n;
+          if (i18n[lang][key]) {
+            el.textContent = i18n[lang][key];
+          }
+        });
+      }
+
+      document.querySelectorAll(".lang-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          setLanguage(currentLang === "ru" ? "kk" : "ru");
+        });
+      });
+
+      setLanguage("ru");
     </script>
   </body>
 </html>
